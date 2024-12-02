@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiktok Carousel</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link Swiper's CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="cotainer">
+      <div class="wrapper"></div>
+      <div class="child swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="./images/Rectangle 19.png" alt="" />
+              <h1>Nuelyoungtech</h1>
+              <p>Software developer</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="./images/Rectangle 14.png" alt="" />
+              <h1>Jhon doe</h1>
+              <p>Music developer</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="./images/Rectangle 20.png" alt="" />
+              <h1>Nuel</h1>
+              <p>Music Artist</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <img src="./images/Rectangle 18.png" alt="" />
+              <h1>ME</h1>
+              <p>ME Artist</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+      const images = [
+        "./images/Rectangle 19.png",
+        "./images/Rectangle 14.png",
+        "./images/Rectangle 20.png",
+        "./images/Rectangle 18.png",
+      ];
+      const wrapper = document.querySelector(".wrapper");
+      let swiper = new Swiper(".swiper", {
+        loop: true, //Enables infinite Scrolling
+        slidesPerView: 1,
+        spaceBetween: 30,
+      });
+
+      swiper.on("slideChange", () => {
+        // console.log(images[swiper.realIndex]);
+        const activeSlideIndex = swiper.realIndex;
+        wrapper.style.backgroundImage = `url("${images[activeSlideIndex]}")`;
+      });
+    </script>
+  </body>
+</html>

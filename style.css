@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --bg: #000;
+  --text: #fff;
+}
+body {
+  background: var(--bg);
+  font-family: "Mulish", sans-serif;
+}
+.cotainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* border: 2px solid var(--text); */
+}
+.cotainer .wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/Rectangle\ 19.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  filter: blur(8px);
+  z-index: 1;
+}
+.cotainer .child {
+  width: 400px;
+  min-height: 400px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  overflow: hidden;
+}
+.swiper-wrapper{
+    display: flex;
+}
+.swiper-slide{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+.cotainer .child .box {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 10px 10px;
+}
+.cotainer .child .box img{
+object-fit: cover;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+}
+.cotainer .child .box h1{
+font-size: 20px;
+margin-top: 10px;
+}
